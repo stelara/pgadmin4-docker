@@ -1,6 +1,6 @@
 FROM python:3.7-alpine3.10
 
-ARG pgadmin_version=4.17
+ARG pgadmin_version=4.22
 
 # create a non-privileged user to use at runtime
 RUN addgroup -g 50 -S pgadmin \
@@ -20,7 +20,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 
 RUN apk add --no-cache alpine-sdk linux-headers \
  && pip install --upgrade pip \
- && echo "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py2.py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
+ && echo "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
  && apk del alpine-sdk linux-headers
 
 EXPOSE 5050

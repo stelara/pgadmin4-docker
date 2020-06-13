@@ -19,10 +19,10 @@ port using `-p 80:5050`.
 ```docker build -t image_name --build-arg pgadmin_version=4.17 .```
 
 ## Example run container (host machine access)
-```run -d --net=host  -name pgadmin4 image_name```
+```run -d --net=host  --name pgadmin4 image_name```
 
 ## Example run container (when postgres server is docker container)
-```run -d -p 5050:5050 -name pgadmin4 image_name```
+```run -d -p 5050:5050 --name pgadmin4 image_name```
 
 
 ## All available options
