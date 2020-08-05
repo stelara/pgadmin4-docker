@@ -19,10 +19,10 @@ port using `-p 80:5050`.
 ```docker build -t image_name --build-arg pgadmin_version=4.24 .```
 
 ## Example run container (host machine access)
-```docker run -d --net=host  -name pgadmin4 image_name```
+```docker run -d --net=host  --name pgadmin4 image_name```
 
 ## Example run container (when postgres server is docker container)
-```docker run -d -p 5050:5050 -name pgadmin4 image_name```
+```docker run -d -p 5050:5050 --name pgadmin4 image_name```
 
 ## All available options
 https://github.com/thaJeztah/pgadmin4-docker
