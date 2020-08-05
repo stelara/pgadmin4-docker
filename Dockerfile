@@ -1,7 +1,7 @@
 FROM python:3.8-alpine3.12
 
-ARG pgadmin_version=4.24
 
+ARG pgadmin_version=4.24
 # create a non-privileged user to use at runtime
 RUN addgroup -g 50 -S pgadmin \
  && adduser -D -S -h /pgadmin -s /sbin/nologin -u 1000 -G pgadmin pgadmin \

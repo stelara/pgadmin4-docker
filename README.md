@@ -24,5 +24,9 @@ port using `-p 80:5050`.
 ## Example run container (when postgres server is docker container)
 ```docker run -d -p 5050:5050 -name pgadmin4 image_name```
 
+
+## Example run container (when postgres server is docker container)
+```run -d -p 5050:5050 --name pgadmin4 image_name```
+
 ## All available options
 https://github.com/thaJeztah/pgadmin4-docker
